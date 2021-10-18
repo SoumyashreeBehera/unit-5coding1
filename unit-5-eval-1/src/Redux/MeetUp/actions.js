@@ -1,5 +1,5 @@
 import React from "react";
-import { ADD_MEET } from "./actionType";
+import { ADD_MEET, GET_MEET } from "./actionType";
 
 export const addMeetAction = (payload) => {
   return {
@@ -10,7 +10,7 @@ export const addMeetAction = (payload) => {
 
 export const getMeetAction = (payload) => {
   return {
-    type: ADD_MEET,
-    payload: payload,
+    type: GET_MEET,
+    payload: [...payload],
   };
 };
