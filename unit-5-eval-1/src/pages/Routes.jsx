@@ -2,6 +2,7 @@ import React from "react";
 import { Switch, Route } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import LoginPage from "../utils/Loginpage";
+import Dashboard from "./Dashboard";
 
 export default function Routes() {
   return (
@@ -9,7 +10,7 @@ export default function Routes() {
       <Navbar />
       <Switch>
         <Route path="/" exact>
-          <h3>Dashboard</h3>
+          <Dashboard />
         </Route>
         <Route path="/login" exact>
           <LoginPage />

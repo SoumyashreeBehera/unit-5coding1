@@ -1,9 +1,12 @@
 import React from "react";
+import { loadData } from "../../utils/localstorage";
 import { LOGIN_REQUEST, LOGIN_SUCCESS } from "./actionType";
 
+let token = loadData();
+
 const initState = {
-  isAuth: false,
-  token: "",
+  isAuth: token || false,
+  token: token ? token : "",
 };
 
 export default function AuthReducer(state = initState, { type, payload }) {
