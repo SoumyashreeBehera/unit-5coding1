@@ -1,8 +1,8 @@
 import React from "react";
-import { ADD_MEET } from "./actionType";
+import { ADD_MEET, GET_MEET } from "./actionType";
 
 const initState = {
-  data: { title: "", description: "", date: "", time: "" },
+  data: [],
 };
 
 export default function meetReducer(state = initState, { type, payload }) {
@@ -10,7 +10,12 @@ export default function meetReducer(state = initState, { type, payload }) {
     case ADD_MEET:
       return {
         ...state,
-        data: { ...state.data, ...payload },
+        data: [...state.data, payload],
+      };
+    case GET_MEET:
+      return {
+        ...state,
+        data: [...payload],
       };
     default:
       return state;
