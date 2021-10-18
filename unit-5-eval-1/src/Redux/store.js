@@ -1,8 +1,8 @@
 import React from "react";
 import AuthReducer from "./Auth/reducer";
-import { combineReducer } from "redux";
+import { createStore, combineReducers } from "redux";
 
-const rootReducer = combineReducer({
+const rootReducer = combineReducers({
   auth: AuthReducer,
 });
 

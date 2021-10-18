@@ -1,6 +1,7 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
 import Navbar from "../components/Navbar";
+import LoginPage from "../utils/Loginpage";
 
 export default function Routes() {
   return (
@@ -11,7 +12,7 @@ export default function Routes() {
           <h3>Dashboard</h3>
         </Route>
         <Route path="/login" exact>
-          <h3>Login</h3>
+          <LoginPage />
         </Route>
       </Switch>
     </div>
